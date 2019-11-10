@@ -3,6 +3,8 @@ Discord 게이머 채널을 위한 다기능 디스코드 봇
 
 Using discord.py https://github.com/Rapptz/discord.py
 
+CSE1019 2019067565 전상민
+
 ## feature
 
 -특정시간 알림
