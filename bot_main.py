@@ -51,11 +51,15 @@ async def on_message(message):
         print(target.id)
     
 async def job1(msg, message):
+
     await message.channel.send('@here' + msg)
+
     print("alarm job processing")
 
 def sch(y, m, d, hr, mn, text, message):
+
     sched.add_job(job1, 'cron', year = y, month = m, day = d, hour = hr, minute = mn, args = [text, message])
+
     print('launch!')
 
 async def ex(message):
@@ -64,7 +68,9 @@ async def ex(message):
                "❎": "No"}
 
     vote = discord.Embed(title="**[찬반투표]**", description=" ", color=0xff00ff)
+
     value = "\n".join("- {} {}".format(*item) for item in choices.items()) 
+
     vote.add_field(name="메세지 하단의 이모지를 통해 찬반의사를 표시해주세요(기명)", value=value, inline=True)
 
     voteargs = await message.channel.send(embed=vote)
@@ -73,24 +79,27 @@ async def ex(message):
 
     for key in k_lst:
         await voteargs.add_reaction(key)
+
     await asyncio.sleep(10)
+
     msg_id = voteargs.id
+
     voteargs = await message.channel.fetch_message(msg_id)
 
-    print(voteargs.reactions[0].count)
-
     await message.channel.send(str(voteargs.reactions[0].count - 1) + " votes in favor(:white_check_mark:).")
-
-        await message.channel.send(str(voteargs.reactions[1].count - 1) + " votes in against(:negative_squared_cross_mark:).")
+    await message.channel.send(str(voteargs.reactions[1].count - 1) + " votes in against(:negative_squared_cross_mark:).")
     
 async def ar(message):
+
     trn = message.content[13:]
     tm = message.author
+
     for i in tm.guild.roles:
         if str(i) == trn:
             await tm.add_roles(i)
             await message.channel.send("Assigned the role successfully.")
             return 0
+            
     await message.channel.send("There is some errors. Please check out your command.")    
     
 client.run('NjQyOTI2OTA3MjA5NTQ3Nzkx.Xc51JQ.RueMNnPJXcHpiHSnxEj1o4bx9Lc')
