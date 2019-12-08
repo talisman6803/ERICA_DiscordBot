@@ -42,6 +42,9 @@ async def on_message(message):
     elif message.content.startswith('#vote'):
         await ex(message)
     
+    elif message.content.startswith('#role_assign'):
+        await ar(message)
+
     elif message.content.startswith('#echo'):
         target = message.content[6:]
         await message.channel.send(message.content)
@@ -75,10 +78,19 @@ async def ex(message):
     voteargs = await message.channel.fetch_message(msg_id)
 
     print(voteargs.reactions[0].count)
-    
-    if(voteargs.reactions[0].count>voteargs.reactions[1].count):
-        await message.channel.send(str(voteargs.reactions[0].count - 1) + " votes in favor(:white_check_mark:).")
-    else:
+
+    await message.channel.send(str(voteargs.reactions[0].count - 1) + " votes in favor(:white_check_mark:).")
+
         await message.channel.send(str(voteargs.reactions[1].count - 1) + " votes in against(:negative_squared_cross_mark:).")
     
-
+async def ar(message):
+    trn = message.content[13:]
+    tm = message.author
+    for i in tm.guild.roles:
+        if str(i) == trn:
+            await tm.add_roles(i)
+            await message.channel.send("Assigned the role successfully.")
+            return 0
+    await message.channel.send("There is some errors. Please check out your command.")    
+    
+client.run('NjQyOTI2OTA3MjA5NTQ3Nzkx.Xc51JQ.RueMNnPJXcHpiHSnxEj1o4bx9Lc')
