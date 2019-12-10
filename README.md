@@ -5,7 +5,7 @@ Using discord.py https://github.com/Rapptz/discord.py
 
 CSE1019 2019067565 전상민
 
-## feature
+## Features
 
 -특정시간 알림
 
@@ -13,6 +13,28 @@ CSE1019 2019067565 전상민
 
 -서버내 역할부여
 
--팀 분할 기능
-
 -추가예정...
+
+## Installing
+
+
+**Python 3.5.3 or higher is required(+3.6 is recomended)**
+
+```
+# Ubuntu 18.04
+
+python3 -m pip install -U discord.py
+
+python3 -m pip install -U asyncio
+
+python3 -m pip install -U apscheduler
+```
+```
+# Windows
+
+py -3 -m pip install -U discord.py
+
+py -3 -m pip install -U asyncio
+
+py -3 -m pip install -U apscheduler
+```
