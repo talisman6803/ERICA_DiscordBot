@@ -38,3 +38,9 @@ py -3 -m pip install -U asyncio
 
 py -3 -m pip install -U apscheduler
 ```
+
+## How to invite ERICA_DiscordBot to your discord server(invite link)
+
+https://discordapp.com/api/oauth2/authorize?client_id=642926907209547791&permissions=8&scope=bot
+
+링크에 접속하여 내가 관리자로 있는 서버로 초대가 가능(관리자 권한을 반드시 부여해야함)
