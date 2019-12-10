@@ -102,4 +102,4 @@ async def ar(message):
             
     await message.channel.send("There is some errors. Please check out your command.")    
     
-client.run('NjQyOTI2OTA3MjA5NTQ3Nzkx.Xc51JQ.RueMNnPJXcHpiHSnxEj1o4bx9Lc')
+client.run('token here!')
