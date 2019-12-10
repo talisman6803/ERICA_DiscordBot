@@ -1,1 +1,5 @@
-NjQyOTI2OTA3MjA5NTQ3Nzkx.Xe-N6g.nQx5BD5EsdTE3XaLLpFtAif2QrU
+NjQyOT토I2OTA3MjA5NTQ큰3Nzkx.Xe-YJA.7FJ19변pI5gW8Kn447조2ndg9JnQWZI
+
+위 토큰에서 토큰변조를 지운 토큰을 bot_main.py 가장 아랫줄 'token here!'에서
+
+' ' 속 내용물을 지우고 위의 토큰을 복사붙여넣기 하세요
